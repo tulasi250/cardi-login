@@ -1,0 +1,32 @@
+{
+  "name": "@cardi-lib/login",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^13.2.0",
+    "@angular/core": "^13.2.0",
+    "bootstrap": "^4.6.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "fesm2015/cardi-lib-login.mjs",
+  "es2020": "fesm2020/cardi-lib-login.mjs",
+  "esm2020": "esm2020/cardi-lib-login.mjs",
+  "fesm2020": "fesm2020/cardi-lib-login.mjs",
+  "fesm2015": "fesm2015/cardi-lib-login.mjs",
+  "typings": "cardi-lib-login.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./cardi-lib-login.d.ts",
+      "esm2020": "./esm2020/cardi-lib-login.mjs",
+      "es2020": "./fesm2020/cardi-lib-login.mjs",
+      "es2015": "./fesm2015/cardi-lib-login.mjs",
+      "node": "./fesm2015/cardi-lib-login.mjs",
+      "default": "./fesm2020/cardi-lib-login.mjs"
+    }
+  },
+  "sideEffects": false
+}

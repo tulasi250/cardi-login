@@ -1,0 +1,32 @@
+import { EventEmitter, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
+import * as i0 from "@angular/core";
+export declare class OrganizationUserComponent implements OnInit {
+    private fb;
+    input: any;
+    POWEREDBYLOGO: string;
+    loginDetails: EventEmitter<any>;
+    forgotPage: EventEmitter<any>;
+    termsCondition: EventEmitter<any>;
+    value3: string;
+    cities: any[];
+    selectedCity1: any;
+    loginForm: FormGroup;
+    show: boolean;
+    disabledLoginPage: boolean;
+    submitStatus: string;
+    errorStatus?: string;
+    closeResult: string;
+    isAuthenticated$: Observable<any>;
+    constructor(fb: FormBuilder);
+    ngOnInit(): void;
+    initializeForm(): void;
+    login(): void;
+    toggleShow(): void;
+    routeToChangePassword(): void;
+    open(): void;
+    routeToQuickRegistration(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<OrganizationUserComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<OrganizationUserComponent, "organization-user", never, { "POWEREDBYLOGO": "POWEREDBYLOGO"; }, { "loginDetails": "loginDetails"; "forgotPage": "forgotPage"; "termsCondition": "termsCondition"; }, never, never>;
+}
