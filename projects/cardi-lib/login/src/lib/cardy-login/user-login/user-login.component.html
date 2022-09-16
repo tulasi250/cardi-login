@@ -1,0 +1,34 @@
+<organization-layoutone
+[LAYOUTTYPE]="LAYOUTTYPE"
+[BANNER]="BANNER"
+[BANNERWIDTH]="BANNERWIDTH"
+[LOGO]="LOGO"
+[POWEREDBYLOGO]="POWEREDBYLOGO"
+[LOGODESCRIPTION]="LOGODESCRIPTION"
+(loginPageInfo)="getLogPageInfo($event)"
+(forgotPageInfo)="gotoForgotPage($event)"
+*ngIf="LAYOUTTYPE === 1">
+</organization-layoutone>
+<organization-layouttwo
+[LAYOUTTYPE]="LAYOUTTYPE"
+[BANNER]="BANNER"
+[BANNERWIDTH]="BANNERWIDTH"
+[LOGO]="LOGO"
+[POWEREDBYLOGO]="POWEREDBYLOGO"
+[LOGODESCRIPTION]="LOGODESCRIPTION"
+(loginPageInfo)="getLogPageInfo($event)"
+(forgotPageInfo)="gotoForgotPage($event)"
+*ngIf="LAYOUTTYPE === 2">
+</organization-layouttwo>
+<organization-layoutthree
+[LAYOUTTYPE]="LAYOUTTYPE"
+[BANNER]="BANNER"
+[BANNERWIDTH]="BANNERWIDTH"
+[LOGO]="LOGO"
+[POWEREDBYLOGO]="POWEREDBYLOGO"
+[LOGODESCRIPTION]="LOGODESCRIPTION"
+(loginPageInfo)="getLogPageInfo($event)"
+(forgotPageInfo)="gotoForgotPage($event)"
+*ngIf="LAYOUTTYPE === 3">
+</organization-layoutthree>
+

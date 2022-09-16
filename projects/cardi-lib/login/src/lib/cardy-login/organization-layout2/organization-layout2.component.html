@@ -1,0 +1,27 @@
+<div class="row login" id="back">
+  <div class="d-flex col-lg-4 shadow align-items-center p-5 mx-auto bg-white rightLoginSet">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
+      <div class="col-md-12 text-center lg-mb-50 mb-4">
+        <organization-logo [LOGO]="LOGO" [LOGODESCRIPTION]="LOGODESCRIPTION" ></organization-logo>
+      </div>
+      <div class="col-md-12 loginBottomSet clearfix">
+        <organization-user
+        [POWEREDBYLOGO]="POWEREDBYLOGO"
+        (loginDetails)="login($event)"
+        (forgotPage)="routeToForgotPage($event)"
+        (termsCondition)="openTermsCondition($event)"
+        ></organization-user>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-lg-flex col-lg-8 align-items-center p-0 container-image">
+    <div class="w-100 d-lg-flex align-items-center justify-content-center">
+      <organization-banner [BANNER]="BANNER" [BANNERWIDTH]="BANNERWIDTH"></organization-banner>
+    </div>
+  </div>
+</div>
+<div class="modal" id="termsandCondition" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-xl" role="document">
+    <terms-condition></terms-condition>
+  </div>
+</div>

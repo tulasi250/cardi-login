@@ -1,0 +1,22 @@
+<div class="row vertical-center login" id="back" [ngStyle]="{'background-image': 'url(' + BANNER + ')', 'width': BANNERWIDTH + '%'}">
+  <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-sm-offset-4 col-lg-4 col-lg-offset-2 d-flex shadow align-items-center p-0 mx-auto bg-white rightLoginSet">
+    <div class="row mx-auto">
+      <div class="col-md-12 text-center lg-mb-50 mb-4">
+        <organization-logo [LOGO]="LOGO" [LOGODESCRIPTION]="LOGODESCRIPTION"></organization-logo>
+      </div>
+      <div class="col-md-12 loginBottomSet clearfix">
+        <organization-user
+        [POWEREDBYLOGO]="POWEREDBYLOGO"
+        (loginDetails)="login($event)"
+        (forgotPage)="routeToForgotPage($event)"
+        (termsCondition)="openTermsCondition($event)"
+        ></organization-user>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="termsandCondition" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-xl" role="document">
+    <terms-condition></terms-condition>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+
+<div class="login-content">
+<form (ngSubmit)="login()" novalidate [formGroup]="loginForm">
+  <div class="clearfix">
+    <div class="form-group">
+      <label aria-labelledby="username" for="username" class="intake-form-labels">User Name </label>
+      <input
+        class="Inputs"
+        autofocus
+        type="mail"
+        formControlName="email"
+        placeholder="Email"
+        name="email"
+        id="username"
+        tabindex="0"
+        required />
+    </div>
+    <div class="form-group no-mar">
+      <label aria-labelledby="password" for="password" class="intake-form-labels w-100"
+        >Password
+        <a href="javascript:void(0)" (click)="routeToChangePassword()" class="btn-link forget">
+          Forgot Password?</a
+        >
+      </label>
+      <input
+        class="Inputs password"
+        #showhideinput
+        formControlName="password"
+        type="password"
+        placeholder="Password"
+        name="password"
+        id="password"
+        tabindex="0"
+        required />
+      <i class="fa fa-eye" aria-hidden="true" (click)="toggleShow()"></i>
+    </div>
+
+    <div class="form-group clearfix mb-30 clsMin-23 pt-10">
+      <div class="checkbox">
+        <p-checkbox
+          class="checklabelbox"
+          name="conditions"
+          formControlName="conditions"
+          value="yes"
+          inputId="ch"
+          aria-checked="false">
+        </p-checkbox>
+        <label class="checklabel" for="ch"
+          >I agree to the
+          <a href="javascript:void(0)" (click)="open()" class="textunderline"
+            >terms &amp; conditions</a
+          ></label
+        >
+      </div>
+    </div>
+    <div class="clearfix text-center mt-4">
+      <p-button
+        role="button"
+        type="submit"
+        title="Login"
+        [disabled]="!loginForm.valid"
+        class="loginbutton"
+        tabindex="0"
+        >{{ submitStatus }}</p-button
+      >
+      <label class="intake-form-labels w-100 mt-3">
+        <a
+          href="javascript:void(0)"
+          (click)="routeToQuickRegistration()"
+          class="btn-link forget float-none"
+          tabindex="0">
+          Not Registered?</a
+        >
+      </label>
+    </div>
+  </div>
+  <br />
+  <powered-by [POWEREDBYLOGO]="POWEREDBYLOGO"></powered-by>
+</form>
+</div>
